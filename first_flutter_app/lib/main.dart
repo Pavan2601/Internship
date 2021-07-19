@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -5,6 +6,7 @@ import 'Register.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
 }
@@ -72,8 +74,7 @@ class MyApp extends StatelessWidget {
                                 .showSnackBar(SnackBar(content: Text('')));
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => RegisterPage()),
+                              MaterialPageRoute(builder: (context) => Home()),
                             );
                           }
                         },
