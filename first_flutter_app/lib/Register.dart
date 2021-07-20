@@ -10,7 +10,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Registratiomn Page"),
+        title: Text("Registration Page"),
       ),
       body: SingleChildScrollView(
         child: Form(

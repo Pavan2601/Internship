@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -9,6 +10,7 @@ import 'Media_Query.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
 }
@@ -50,6 +52,21 @@ class MyApp extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(top: 30),
                       ),
+<<<<<<< HEAD
+                      ElevatedButton(
+                        onPressed: () {
+                          // Validate returns true if the form is valid, or false otherwise.
+                          if (formKey.currentState!.validate()) {
+                            // If the form is valid, display a snackbar. In the real world,
+                            // you'd often call a server or save the information in a database.
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(SnackBar(content: Text('')));
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Home()),
+                            );
+                          }
+=======
                       // Padding(
                       //   padding: EdgeInsets.only(left: 2),
                       // ),
@@ -64,6 +81,7 @@ class MyApp extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => DashboardPage()),
                           );
+>>>>>>> fa9f19f8f676f47b10c99d659bcb441cba2e1673
                         },
                       ),
                       SizedBox(
