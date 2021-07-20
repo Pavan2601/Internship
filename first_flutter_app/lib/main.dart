@@ -2,7 +2,11 @@ import 'package:first_flutter_app/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:validators/sanitizers.dart';
 import 'Register.dart';
+import 'login.dart';
+import 'Dashboard.dart';
+import 'Media_Query.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -13,57 +17,42 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  final formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Page"),
+        title: Text("Home Page"),
+        actions: <Widget>[
+          ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.black38),
+            ),
+            child: Text(
+              'login',
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()),
+              );
+            },
+          )
+        ],
       ),
-      body: Container(
-        child: Form(
-          key: formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      drawer: Drawer(
+        child: Container(
+          color: Colors.cyan,
+          child: ListView(
+            padding: EdgeInsets.zero,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextFormField(
-                  // The validator receives the text that the user has entered.
-                  decoration: InputDecoration(
-                      labelText: 'User Name', border: OutlineInputBorder()),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextFormField(
-                  // The validator receives the text that the user has entered.
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    border: OutlineInputBorder(),
-                  ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
-                ),
-              ),
-              Center(
-                child: Container(
+                  padding: EdgeInsets.zero,
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(16.0),
+                        padding: EdgeInsets.only(top: 30),
                       ),
+<<<<<<< HEAD
                       ElevatedButton(
                         onPressed: () {
                           // Validate returns true if the form is valid, or false otherwise.
@@ -77,31 +66,47 @@ class MyApp extends StatelessWidget {
                               MaterialPageRoute(builder: (context) => Home()),
                             );
                           }
+=======
+                      // Padding(
+                      //   padding: EdgeInsets.only(left: 2),
+                      // ),
+                      ListTile(
+                        title: Text(
+                          'Dashboard',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DashboardPage()),
+                          );
+>>>>>>> fa9f19f8f676f47b10c99d659bcb441cba2e1673
                         },
-                        child: Text('Sign In'),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => RegisterPage()),
-                            );
-                            // Validate returns true if the form is valid, or false otherwise.
-                            //
-                          },
-                          child: Text('Sign UP'),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      ListTile(
+                        title: Text(
+                          'Settings',
+                          style: TextStyle(fontSize: 25),
                         ),
                       ),
                     ],
-                  ),
-                ),
-              ),
+                  ))
             ],
           ),
         ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+            child: Center(
+          child: Text(
+            'Hi....This is home page',
+            textDirection: TextDirection.ltr,
+          ),
+        )),
       ),
     );
   }
