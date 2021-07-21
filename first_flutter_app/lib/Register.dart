@@ -9,7 +9,12 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber[50],
       appBar: AppBar(
+<<<<<<< HEAD
+=======
+        backgroundColor: Colors.amber,
+>>>>>>> 48a75a6 (Scanner Added)
         title: Text("Registration Page"),
       ),
       body: SingleChildScrollView(
@@ -77,7 +82,8 @@ class RegisterPage extends StatelessWidget {
               Center(
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: ElevatedButton(
+                  child: RaisedButton(
+                    color: Colors.amber,
                     onPressed: () {
                       // Validate returns true if the form is valid, or false otherwise.
                       if (formKey.currentState!.validate()) {

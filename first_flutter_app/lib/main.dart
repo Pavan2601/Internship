@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import 'package:first_flutter_app/home.dart';
+=======
+// @dart=2.9
+import 'package:first_flutter_app/home.dart';
+import 'package:first_flutter_app/start_screen.dart';
+>>>>>>> 48a75a6 (Scanner Added)
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -11,7 +17,11 @@ import 'Media_Query.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
+<<<<<<< HEAD
     home: MyApp(),
+=======
+    home: SplashScreen(),
+>>>>>>> 48a75a6 (Scanner Added)
   ));
 }
 
@@ -19,6 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       appBar: AppBar(
         title: Text("Home Page"),
@@ -109,5 +120,8 @@ class MyApp extends StatelessWidget {
         )),
       ),
     );
+=======
+    return Scaffold();
+>>>>>>> 48a75a6 (Scanner Added)
   }
 }

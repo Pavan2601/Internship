@@ -1,7 +1,9 @@
 import 'package:first_flutter_app/Media_Query.dart';
 import 'package:first_flutter_app/main.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'Register.dart';
+import 'home.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -11,21 +13,28 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber[50],
       appBar: AppBar(
+        backgroundColor: Colors.amber,
         title: Text("Login Page"),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              child: Center(
-                child: Image.asset(
-                  'assets/images/login.jpg',
-                  width: 150,
-                  height: 150,
-                ),
-              ),
+            IconButton(
+              icon: FaIcon(FontAwesomeIcons.user),
+              iconSize: 100,
+              onPressed: () {},
             ),
+            // Container(
+            //   child: Center(
+            //     child: Image.asset(
+            //       'assets/images/login.jpg',
+            //       width: 150,
+            //       height: 150,
+            //     ),
+            //   ),
+            // ),
             Container(
               child: Form(
                 key: formKey,
@@ -77,7 +86,8 @@ class LoginPage extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.all(16.0),
                             ),
-                            ElevatedButton(
+                            RaisedButton(
+                              color: Colors.amber,
                               onPressed: () {
                                 // Validate returns true if the form is valid, or false otherwise.
                                 if (formKey.currentState!.validate()) {
@@ -87,10 +97,12 @@ class LoginPage extends StatelessWidget {
                                       SnackBar(content: Text('')));
                                   justify = 1;
 
-                                  Navigator.push(
+                                  Navigator.pushReplacement<void, void>(
                                     context,
-                                    MaterialPageRoute(
-                                        builder: (context) => MyApp()),
+                                    MaterialPageRoute<void>(
+                                      builder: (BuildContext context) =>
+                                          const Home(),
+                                    ),
                                   );
                                 }
                               },

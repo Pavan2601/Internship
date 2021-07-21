@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 double deviceSize(BuildContext context) => MediaQuery.of(context).size.width;
 
-class Home extends StatelessWidget {
+class MediaHome extends StatelessWidget {
   static bool isMobile(BuildContext context) =>
       MediaQuery.of(context).size.width < 800;
 
