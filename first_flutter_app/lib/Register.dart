@@ -11,7 +11,14 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber[50],
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: Colors.amber,
+=======
+<<<<<<< HEAD
+=======
+        backgroundColor: Colors.amber,
+>>>>>>> 48a75a6 (Scanner Added)
+>>>>>>> origin
         title: Text("Registration Page"),
       ),
       body: SingleChildScrollView(
