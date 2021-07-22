@@ -10,27 +10,27 @@ class Category {
 
 List<Category> categoryList = [
   Category(
-    icon: "assets/hair-salon.png",
+    icon: "assets/images/hair-salon.png",
     title: "Salon",
     color: kPurple,
   ),
   Category(
-    icon: "assets/scissor.png",
+    icon: "assets/images/scissor.png",
     title: "Haircut",
     color: kYellow,
   ),
   Category(
-    icon: "assets/hair-dryer.png",
+    icon: "assets/images/hair-dryer.png",
     title: "Parlor",
     color: kGreen,
   ),
   Category(
-    icon: "assets/shampoo.png",
+    icon: "assets/images/shampoo.png",
     title: "Shampoo",
     color: kIndigo,
   ),
   Category(
-    icon: "assets/relax.png",
+    icon: "assets/images/relax.png",
     title: "Massage",
     color: kPink,
   ),

@@ -6,7 +6,9 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.amber[50],
         appBar: AppBar(
+          backgroundColor: Colors.amber,
           title: Text("Dashboard"),
         ),
         body: SingleChildScrollView(
@@ -46,11 +48,12 @@ class DashboardPage extends StatelessWidget {
                       Text('Membership'),
                       IconButton(
                           padding: EdgeInsets.only(bottom: 5),
-                          color: Colors.blue,
+                          color: Colors.amber,
                           onPressed: () {
                             showModalBottomSheet(
                                 context: context,
                                 builder: (context) => Container(
+                                      color: Colors.amber[50],
                                       child: Column(
                                         children: [
                                           Padding(padding: EdgeInsets.all(15)),
@@ -73,7 +76,7 @@ class DashboardPage extends StatelessWidget {
                                                   child: Text(
                                                     'Add Membership',
                                                     style: TextStyle(
-                                                        color: Colors.blue),
+                                                        color: Colors.amber),
                                                   )),
                                             ],
                                           ),
@@ -86,18 +89,20 @@ class DashboardPage extends StatelessWidget {
                   ),
                 ),
                 Padding(padding: EdgeInsets.all(10)),
-                Container(
-                  height: 50,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(
-                        color: Colors.black54,
-                        width: 3,
-                      )),
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Column(
-                    children: [Text('Previous Bookings')],
+                SingleChildScrollView(
+                  child: Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(
+                          color: Colors.black54,
+                          width: 3,
+                        )),
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Column(
+                      children: [Text('Previous Bookings')],
+                    ),
                   ),
                 ),
                 //Center(child: Text('This is profile')),

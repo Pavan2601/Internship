@@ -9,7 +9,9 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber[50],
       appBar: AppBar(
+        backgroundColor: Colors.amber,
         title: Text("Registration Page"),
       ),
       body: SingleChildScrollView(
@@ -21,9 +23,14 @@ class RegisterPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: TextFormField(
+                  cursorColor: Colors.black,
                   // The validator receives the text that the user has entered.
                   decoration: InputDecoration(
-                      labelText: 'First Name', border: OutlineInputBorder()),
+                      labelText: 'First Name',
+                      labelStyle: TextStyle(color: Colors.black),
+                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black))),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter some text';
@@ -35,9 +42,14 @@ class RegisterPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: TextFormField(
+                  cursorColor: Colors.black,
                   // The validator receives the text that the user has entered.
                   decoration: InputDecoration(
-                      labelText: 'Last Name', border: OutlineInputBorder()),
+                      labelText: 'Last Name',
+                      labelStyle: TextStyle(color: Colors.black),
+                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black))),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter some text';
@@ -49,9 +61,33 @@ class RegisterPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: TextFormField(
+                  cursorColor: Colors.black,
                   // The validator receives the text that the user has entered.
                   decoration: InputDecoration(
-                      labelText: 'Email', border: OutlineInputBorder()),
+                      labelText: 'User Name',
+                      labelStyle: TextStyle(color: Colors.black),
+                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black))),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter some text';
+                    }
+                    return null;
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextFormField(
+                  cursorColor: Colors.black,
+                  // The validator receives the text that the user has entered.
+                  decoration: InputDecoration(
+                      labelText: 'Email',
+                      labelStyle: TextStyle(color: Colors.black),
+                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black))),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter valid Email';
@@ -63,9 +99,14 @@ class RegisterPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: TextFormField(
+                  cursorColor: Colors.black,
                   // The validator receives the text that the user has entered.
                   decoration: InputDecoration(
-                      labelText: 'Address', border: OutlineInputBorder()),
+                      labelText: 'Address',
+                      labelStyle: TextStyle(color: Colors.black),
+                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black))),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter some text';
@@ -77,7 +118,8 @@ class RegisterPage extends StatelessWidget {
               Center(
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: ElevatedButton(
+                  child: RaisedButton(
+                    color: Colors.amber,
                     onPressed: () {
                       // Validate returns true if the form is valid, or false otherwise.
                       if (formKey.currentState!.validate()) {

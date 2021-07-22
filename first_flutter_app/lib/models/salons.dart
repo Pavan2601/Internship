@@ -10,31 +10,31 @@ List<Salons> salonList = [
   Salons(
     name: "Salon 1",
     address: "21 Bleeker Street",
-    image: "assets/salon_1.jpg",
+    image: "assets/images/salon_1.jpg",
   ),
   Salons(
     name: "Salon 2",
     address: "13 Park Street",
-    image: "assets/salon_2.jpg",
+    image: "assets/images/salon_2.jpg",
   ),
   Salons(
     name: "Salon 3",
     address: "22 Washington Street",
-    image: "assets/salon_3.jpg",
+    image: "assets/images/salon_3.jpg",
   ),
   Salons(
     name: "Salon 4",
     address: "25 Wolf Street",
-    image: "assets/salon_4.jpg",
+    image: "assets/images/salon_4.jpg",
   ),
   Salons(
     name: "Salon 5",
     address: "34 Lively Street",
-    image: "assets/salon_5.jpg",
+    image: "assets/images/salon_5.jpg",
   ),
   Salons(
     name: "Salon 6",
     address: "18 Sunset Street",
-    image: "assets/salon_6.jpg",
+    image: "assets/images/salon_6.jpg",
   ),
 ];
